@@ -26,11 +26,11 @@ Diseño y construyo plataformas completas, desde el servidor hasta la app móvil
 | Área | Tecnologías |
 |---|---|
 | **Backend** | Odoo (módulos propios, ORM, controladores HTTP, tareas programadas), Python, PostgreSQL |
-| **ERP / negocio** | CRM, Ventas, Facturación y Contabilidad, portal de clientes, vistas XML, reportes PDF con QWeb, reglas de seguridad |
+| **ERP / negocio** | CRM, Ventas, Facturación y Contabilidad, portal de clientes, vistas XML, reportes PDF con QWeb |
 | **Móvil y web** | React Native, Expo, TypeScript, TanStack Query, versión web con React Native Web |
-| **Integraciones** | WhatsApp Business (Cloud API de Meta), Google Play Billing, Google y Microsoft (inicio de sesión), IA generativa (Gemini y Claude) |
+| **Integraciones** | Mensajería, facturación de tiendas de apps, inicio de sesión con proveedores externos, IA generativa |
 | **Seguridad** | Passkeys (WebAuthn), verificación en dos pasos (TOTP), biometría, OAuth |
-| **Infraestructura** | Docker y Docker Compose, Nginx, certificados TLS con Certbot, despliegue de actualizaciones OTA |
+| **Infraestructura** | Contenedores, proxy inverso con TLS, despliegue de actualizaciones |
 
 ---
 
@@ -41,21 +41,21 @@ Plataforma para docentes que genera planificaciones, instrumentos y materiales d
 Construí de extremo a extremo:
 
 - **Backend en Odoo** con módulos propios: generación de documentos con IA, bandeja de WhatsApp, sitio público, publicaciones y asistente por voz.
-- **App móvil y web** con React Native y Expo, con más de 300 archivos TypeScript organizados por funcionalidad.
-- **Cobro con Google Play Billing**, verificado en el servidor, con facturas y planes gestionados en Odoo.
+- **App móvil y web** con React Native y Expo, organizadas por funcionalidad.
+- **Cobro de suscripciones**, verificado en el servidor, con facturas y planes gestionados en Odoo.
 - **CRM y ventas** conectados al flujo de usuarios y a WhatsApp.
 - **Seguridad moderna:** passkeys, 2FA y biometría.
-- **Operación:** contenedores con Docker, proxy con Nginx, cola de tareas para las generaciones con IA y actualizaciones sin pasar por la tienda.
+- **Operación:** contenedores, proxy inverso, cola de tareas para las generaciones con IA y actualizaciones remotas.
 
 El código fuente es privado por ser un producto comercial. Cada parte está documentada como caso de estudio, con sus problemas y soluciones:
 
 | Proyecto | Qué muestra |
 |---|---|
 | [planner-for-education](https://github.com/Jeisondls/planner-for-education) | Visión general, arquitectura y mapa del proyecto |
-| [planner-mobile](https://github.com/Jeisondls/planner-mobile) | App React Native: sesión segura, cola de generación, Google Play Billing, OTA |
+| [planner-mobile](https://github.com/Jeisondls/planner-mobile) | App React Native: sesión segura y generación asíncrona |
 | [planner-web](https://github.com/Jeisondls/planner-web) | La misma base de código en el navegador, con interfaz de escritorio |
-| [planner-odoo-backend](https://github.com/Jeisondls/planner-odoo-backend) | Módulos Odoo: IA asíncrona, licencias, CRM, ventas, facturación, WhatsApp y cobro |
-| [planner-docker-infra](https://github.com/Jeisondls/planner-docker-infra) | Docker, PostgreSQL, Nginx y TLS |
+| [planner-odoo-backend](https://github.com/Jeisondls/planner-odoo-backend) | Módulos Odoo: IA asíncrona, CRM, ventas y facturación |
+| [planner-docker-infra](https://github.com/Jeisondls/planner-docker-infra) | Despliegue en contenedores |
 
 ---
 
